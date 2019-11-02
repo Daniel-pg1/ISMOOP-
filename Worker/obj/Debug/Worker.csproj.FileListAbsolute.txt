@@ -1,0 +1,6 @@
+D:\вижуалка\программі\ISMOOP\Worker\bin\Debug\Worker.exe.config
+D:\вижуалка\программі\ISMOOP\Worker\bin\Debug\Worker.exe
+D:\вижуалка\программі\ISMOOP\Worker\bin\Debug\Worker.pdb
+D:\вижуалка\программі\ISMOOP\Worker\obj\Debug\Worker.csprojAssemblyReference.cache
+D:\вижуалка\программі\ISMOOP\Worker\obj\Debug\Worker.exe
+D:\вижуалка\программі\ISMOOP\Worker\obj\Debug\Worker.pdb

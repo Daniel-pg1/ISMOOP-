@@ -1,0 +1,6 @@
+D:\вижуалка\программі\ISMOOP\debagging\bin\Debug\debagging.exe.config
+D:\вижуалка\программі\ISMOOP\debagging\bin\Debug\debagging.exe
+D:\вижуалка\программі\ISMOOP\debagging\bin\Debug\debagging.pdb
+D:\вижуалка\программі\ISMOOP\debagging\obj\Debug\debagging.csprojAssemblyReference.cache
+D:\вижуалка\программі\ISMOOP\debagging\obj\Debug\debagging.exe
+D:\вижуалка\программі\ISMOOP\debagging\obj\Debug\debagging.pdb

@@ -1,0 +1,6 @@
+D:\вижуалка\программі\ISMOOP\FromHumanToLibraryUser\bin\Debug\FromHumanToLibraryUser.exe.config
+D:\вижуалка\программі\ISMOOP\FromHumanToLibraryUser\bin\Debug\FromHumanToLibraryUser.exe
+D:\вижуалка\программі\ISMOOP\FromHumanToLibraryUser\bin\Debug\FromHumanToLibraryUser.pdb
+D:\вижуалка\программі\ISMOOP\FromHumanToLibraryUser\obj\Debug\FromHumanToLibraryUser.csprojAssemblyReference.cache
+D:\вижуалка\программі\ISMOOP\FromHumanToLibraryUser\obj\Debug\FromHumanToLibraryUser.exe
+D:\вижуалка\программі\ISMOOP\FromHumanToLibraryUser\obj\Debug\FromHumanToLibraryUser.pdb
