@@ -12,7 +12,7 @@ namespace OOPDrawWindowsForm
 {
     public partial class Form1 : Form
     {
-        Shape[] shapes;
+        protected Shape[] shapes;
         public Form1()
         {
            InitializeComponent();
@@ -81,10 +81,9 @@ namespace OOPDrawWindowsForm
            
             if (shapes != null)
             {
-                Graphics graphics = e.Graphics;
                 for (int i = 0; i < shapes.Length; i++)
                 {
-                    shapes[i].Draw(graphics);
+                    shapes[i].Draw(e.Graphics);
                 }
             }
         }
