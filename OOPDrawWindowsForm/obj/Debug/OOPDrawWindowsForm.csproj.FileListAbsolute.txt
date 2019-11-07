@@ -1,0 +1,12 @@
+D:\вижуалка\программі\ISMOOP\OOPDrawWindowsForm\bin\Debug\OOPDrawWindowsForm.exe.config
+D:\вижуалка\программі\ISMOOP\OOPDrawWindowsForm\bin\Debug\OOPDrawWindowsForm.exe
+D:\вижуалка\программі\ISMOOP\OOPDrawWindowsForm\bin\Debug\OOPDrawWindowsForm.pdb
+D:\вижуалка\программі\ISMOOP\OOPDrawWindowsForm\bin\Debug\OOPDraw.dll
+D:\вижуалка\программі\ISMOOP\OOPDrawWindowsForm\bin\Debug\OOPDraw.pdb
+D:\вижуалка\программі\ISMOOP\OOPDrawWindowsForm\obj\Debug\OOPDrawWindowsForm.csprojAssemblyReference.cache
+D:\вижуалка\программі\ISMOOP\OOPDrawWindowsForm\obj\Debug\OOPDrawWindowsForm.Form1.resources
+D:\вижуалка\программі\ISMOOP\OOPDrawWindowsForm\obj\Debug\OOPDrawWindowsForm.Properties.Resources.resources
+D:\вижуалка\программі\ISMOOP\OOPDrawWindowsForm\obj\Debug\OOPDrawWindowsForm.csproj.GenerateResource.cache
+D:\вижуалка\программі\ISMOOP\OOPDrawWindowsForm\obj\Debug\OOPDrawWindowsForm.csproj.CopyComplete
+D:\вижуалка\программі\ISMOOP\OOPDrawWindowsForm\obj\Debug\OOPDrawWindowsForm.exe
+D:\вижуалка\программі\ISMOOP\OOPDrawWindowsForm\obj\Debug\OOPDrawWindowsForm.pdb

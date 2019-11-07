@@ -1,0 +1,5 @@
+D:\вижуалка\программі\ISMOOP\OOPDraw\bin\Debug\OOPDraw.dll
+D:\вижуалка\программі\ISMOOP\OOPDraw\bin\Debug\OOPDraw.pdb
+D:\вижуалка\программі\ISMOOP\OOPDraw\obj\Debug\OOPDraw.csprojAssemblyReference.cache
+D:\вижуалка\программі\ISMOOP\OOPDraw\obj\Debug\OOPDraw.dll
+D:\вижуалка\программі\ISMOOP\OOPDraw\obj\Debug\OOPDraw.pdb
