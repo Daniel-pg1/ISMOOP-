@@ -19,25 +19,6 @@ namespace OOPDrawWindowsForm
 
             
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            
-        }
-        
-        private void pictureBoxDraw_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void pictureBoxDraw_Paint(object sender, PaintEventArgs e)
-        {
-            
-        }
         private void buttonDraw_Click(object sender, EventArgs e)
         {
             
@@ -81,14 +62,9 @@ namespace OOPDrawWindowsForm
                 }
             }
             
-
+            
             pictureBoxDraw.Invalidate();
            
-        }
-        
-        private void trackBar1_Scroll(object sender, EventArgs e)
-        {
-
         }
         private void buttonClear_Click(object sender, EventArgs e)
         {
@@ -102,6 +78,7 @@ namespace OOPDrawWindowsForm
 
         private void pictureBoxDraw_Paint_1(object sender, PaintEventArgs e)
         {
+           
             if (shapes != null)
             {
                 Graphics graphics = e.Graphics;

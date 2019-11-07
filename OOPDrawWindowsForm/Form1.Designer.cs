@@ -75,7 +75,6 @@
             this.pictureBoxDraw.Size = new System.Drawing.Size(691, 476);
             this.pictureBoxDraw.TabIndex = 2;
             this.pictureBoxDraw.TabStop = false;
-            this.pictureBoxDraw.Click += new System.EventHandler(this.pictureBoxDraw_Click);
             this.pictureBoxDraw.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBoxDraw_Paint_1);
             // 
             // label1
@@ -88,7 +87,6 @@
             this.label1.Size = new System.Drawing.Size(124, 20);
             this.label1.TabIndex = 3;
             this.label1.Text = "Клименко Д. О.";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // trackBarElNumber
             // 
@@ -102,7 +100,6 @@
             this.trackBarElNumber.Size = new System.Drawing.Size(691, 45);
             this.trackBarElNumber.TabIndex = 4;
             this.trackBarElNumber.Value = 1;
-            this.trackBarElNumber.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
             // Form1
             // 
@@ -119,7 +116,6 @@
             this.MinimumSize = new System.Drawing.Size(1000, 650);
             this.Name = "Form1";
             this.Text = "Практична робота № 6";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDraw)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarElNumber)).EndInit();
             this.ResumeLayout(false);
