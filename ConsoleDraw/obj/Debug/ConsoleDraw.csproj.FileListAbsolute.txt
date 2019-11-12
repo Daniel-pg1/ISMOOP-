@@ -1,9 +1,0 @@
-D:\вижуалка\программі\ISMOOP\ConsoleDraw\bin\Debug\ConsoleDraw.exe.config
-D:\вижуалка\программі\ISMOOP\ConsoleDraw\bin\Debug\ConsoleDraw.exe
-D:\вижуалка\программі\ISMOOP\ConsoleDraw\bin\Debug\ConsoleDraw.pdb
-D:\вижуалка\программі\ISMOOP\ConsoleDraw\bin\Debug\OOPDraw.dll
-D:\вижуалка\программі\ISMOOP\ConsoleDraw\bin\Debug\OOPDraw.pdb
-D:\вижуалка\программі\ISMOOP\ConsoleDraw\obj\Debug\ConsoleDraw.csprojAssemblyReference.cache
-D:\вижуалка\программі\ISMOOP\ConsoleDraw\obj\Debug\ConsoleDraw.csproj.CopyComplete
-D:\вижуалка\программі\ISMOOP\ConsoleDraw\obj\Debug\ConsoleDraw.exe
-D:\вижуалка\программі\ISMOOP\ConsoleDraw\obj\Debug\ConsoleDraw.pdb
