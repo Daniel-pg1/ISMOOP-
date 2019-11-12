@@ -9,15 +9,19 @@ namespace OOPDraw
 {
     public class Point : Shape
     {
-        public Point(int coordX, int coordY, Color color) 
-            : base(coordX, coordY, color)
+        public Point(int coordX, int coordY, Pen pen) 
+            : base(coordX, coordY, pen)
         {
 
         }
         public override void Draw(Graphics graphics)
         {
-            Pen pen = new Pen(Color, 2);
-            graphics.DrawEllipse(pen, CoordX - 1, CoordY - 1, 2, 2);
+            graphics.DrawEllipse(Pen, CoordX - 1, CoordY - 1, 2, 2);
+        }
+        public override void Move(int dx, int dy)
+        {
+            CoordX += dx;
+            CoordY += dy;
         }
     }
 }

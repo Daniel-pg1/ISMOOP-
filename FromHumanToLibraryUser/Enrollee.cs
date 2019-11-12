@@ -29,6 +29,7 @@ namespace FromHumanToLibraryUser
             SchoolName = schoolName;
         }
         public Enrollee(Enrollee obj)
+            :base(obj)
         {
             ZNOgrades = obj.ZNOgrades;
             SchoolGrades = obj.SchoolGrades;

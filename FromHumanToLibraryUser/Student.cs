@@ -33,6 +33,7 @@ namespace FromHumanToLibraryUser
             University = university;
         }
         public Student(Student obj)
+            : base(obj)
         {
             Course = obj.Course;
             Group = obj.Group;

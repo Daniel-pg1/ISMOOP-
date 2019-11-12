@@ -30,6 +30,7 @@ namespace FromHumanToLibraryUser
             University = university;
         }
         public Teacher(Teacher obj)
+            :base(obj)
         {
             Position = obj.Position;
             Department = obj.Department;

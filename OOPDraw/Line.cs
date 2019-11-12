@@ -11,16 +11,22 @@ namespace OOPDraw
     {
         protected int CoordX2;
         protected int CoordY2;
-        public Line(int coordX, int coordY, int coordX2, int coordY2, Color color)
-           : base(coordX, coordY, color)
+        public Line(int coordX, int coordY, int coordX2, int coordY2, Pen pen)
+           : base(coordX, coordY, pen)
         {
             CoordX2 = coordX2;
             CoordY2 = coordY2;
         }
         public override void Draw(Graphics graphics)
         {
-            Pen pen = new Pen(Color, 2);
-            graphics.DrawLine(pen, CoordX, CoordY, CoordX2, CoordY2);
+            
+            graphics.DrawLine(Pen, CoordX, CoordY, CoordX2, CoordY2);
+        }
+        public override void Move(int dx, int dy)
+        {
+            base.Move(dx, dy);
+            CoordX2 += dx;
+            CoordY2 += dy;
         }
     }
 }

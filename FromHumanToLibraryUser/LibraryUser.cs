@@ -29,6 +29,7 @@ namespace FromHumanToLibraryUser
             DateGiving = dateGiving;
         }
         public LibraryUser(LibraryUser obj)
+            : base(obj)
         {
             LibraryTicketNumber = obj.LibraryTicketNumber;
             AmountMonthlyPayment = obj.AmountMonthlyPayment;

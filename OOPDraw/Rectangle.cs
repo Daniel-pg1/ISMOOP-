@@ -9,15 +9,19 @@ namespace OOPDraw
 {
     public class Rectangle : Line
     {
-        public Rectangle(int coordX, int coordY, int coordX2, int coordY2, Color color)
-           : base(coordX, coordY,  coordX2, coordY2, color)
+        public Rectangle(int coordX, int coordY, int coordX2, int coordY2, Pen pen)
+           : base(coordX, coordY,  coordX2, coordY2, pen)
         {
 
         }
         public override void Draw(Graphics graphics)
         {
-            Pen pen = new Pen(Color, 2);
-            graphics.DrawRectangle(pen, CoordX, CoordY, CoordX2, CoordY2 );
+             graphics.DrawRectangle(Pen, CoordX - CoordX2/2, CoordY - CoordY2/2, CoordX2, CoordY2 );
+        }
+        public override void Move(int dx, int dy)
+        {
+            CoordX -= -dx;
+            CoordY -= -dy;
         }
     }
 }

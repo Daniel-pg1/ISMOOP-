@@ -11,14 +11,15 @@ namespace OOPDraw
     {
         protected int CoordX;
         protected int CoordY;
-        protected Color Color;
-        public Shape(int coordX, int coordY, Color color)
+        protected Pen Pen;
+        public Shape(int coordX, int coordY, Pen pen)
         {
             CoordX = coordX;
             CoordY = coordY;
-            Color = color;
+            Pen = pen;
         }
         public abstract void Draw(Graphics graphics);
+        public abstract void Move(int dx, int dy);
             
     }
 }

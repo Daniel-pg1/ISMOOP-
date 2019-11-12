@@ -25,36 +25,39 @@ namespace ConsoleDraw
             Shape[] shapes = new Shape[n];
             for (int i = 0; i < shapes.Length; i++)
             {
-                Color Color = Color.FromArgb(rnd.Next(256), rnd.Next(256), rnd.Next(256));
+                Pen pen = new Pen(Color.FromArgb(rnd.Next(256),
+                                                 rnd.Next(256),
+                                                 rnd.Next(256), rnd.Next(0,5)
+                    ));
                 int elements = rnd.Next(0, 5);
                 switch (elements)
                 {
                     case 0:
                         shapes[i] = new OOPDraw.Point(rnd.Next(0, 1000),
-                                                      rnd.Next(0, 1000), Color);
+                                                      rnd.Next(0, 1000), pen);
                         break;
                     case 1:
                         shapes[i] = new Ellipse(rnd.Next(0, 1000),
                                                 rnd.Next(0, 1000),
                                                 rnd.Next(0, 200),
-                                                rnd.Next(0, 200), Color);
+                                                rnd.Next(0, 200), pen);
                         break;
                     case 2:
                         shapes[i] = new Line(rnd.Next(0, 1000),
                                              rnd.Next(0, 1000),
                                              rnd.Next(0, 1000),
-                                             rnd.Next(0, 1000), Color);
+                                             rnd.Next(0, 1000), pen);
                         break;
                     case 3:
                         shapes[i] = new Circle(rnd.Next(0, 1000),
                                                rnd.Next(0, 1000),
-                                               rnd.Next(0, 200), Color);
+                                               rnd.Next(0, 200), pen);
                         break;
                     case 4:
                         shapes[i] = new OOPDraw.Rectangle(rnd.Next(0, 1000),
                                                           rnd.Next(0, 1000),
                                                           rnd.Next(0, 1000),
-                                                          rnd.Next(0, 1000), Color);
+                                                          rnd.Next(0, 1000), pen);
                         break;
                     default:
                         break;
