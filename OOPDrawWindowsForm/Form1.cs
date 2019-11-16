@@ -24,7 +24,7 @@ namespace OOPDrawWindowsForm
             shapes = new List<Shape>();
             for (int i = 0; i < trackBarElNumber.Value; i++)
             {
-                Pen pen = new Pen(Color.FromArgb(rnd.Next(256), rnd.Next(256), rnd.Next(256), rnd.Next(0,5)));
+                Pen pen = new Pen(Color.FromArgb(rnd.Next(256), rnd.Next(256), rnd.Next(256)), rnd.Next(5));
                 int elements = rnd.Next(0, 5);
                 switch (elements)
                 {
@@ -33,27 +33,27 @@ namespace OOPDrawWindowsForm
                                                       rnd.Next(0, pictureBoxDraw.Height), pen));
                         break;
                     case 1:
-                        shapes.Add( new Ellipse(rnd.Next(5, pictureBoxDraw.Width), 
-                                                rnd.Next(5, pictureBoxDraw.Height), 
+                        shapes.Add( new Ellipse(rnd.Next(5, pictureBoxDraw.Width/2), 
+                                                rnd.Next(5, pictureBoxDraw.Height/2), 
                                                 rnd.Next(5, pictureBoxDraw.Width/10), 
                                                 rnd.Next(5, pictureBoxDraw.Height/10), pen));
                         break;
                     case 2:
-                        shapes.Add( new Line(rnd.Next(5, pictureBoxDraw.Width), 
-                                             rnd.Next(5, pictureBoxDraw.Height), 
-                                             rnd.Next(5, pictureBoxDraw.Width), 
-                                             rnd.Next(5, pictureBoxDraw.Height), pen));
+                        shapes.Add( new Line(rnd.Next(5, pictureBoxDraw.Width/2), 
+                                             rnd.Next(5, pictureBoxDraw.Height/2 ), 
+                                             rnd.Next(5, pictureBoxDraw.Width/2 ), 
+                                             rnd.Next(5, pictureBoxDraw.Height/2 ), pen));
                         break;
                     case 3:
-                        shapes.Add(new Circle(rnd.Next(5, pictureBoxDraw.Width), 
-                                               rnd.Next(5, pictureBoxDraw.Height), 
+                        shapes.Add(new Circle(rnd.Next(5, pictureBoxDraw.Width/2), 
+                                               rnd.Next(5, pictureBoxDraw.Height/2), 
                                                rnd.Next(5,pictureBoxDraw.Width/10), pen));
                         break;
                     case 4:
-                        shapes.Add( new OOPDraw.Rectangle(rnd.Next(5, pictureBoxDraw.Width), 
-                                                          rnd.Next(5, pictureBoxDraw.Height), 
-                                                          rnd.Next(5, pictureBoxDraw.Width/2), 
-                                                          rnd.Next(5, pictureBoxDraw.Height/2), pen));
+                        shapes.Add( new OOPDraw.Rectangle(rnd.Next(5, pictureBoxDraw.Width/2 ), 
+                                                          rnd.Next(5, pictureBoxDraw.Height /2), 
+                                                          rnd.Next(5, pictureBoxDraw.Width/2 ), 
+                                                          rnd.Next(5, pictureBoxDraw.Height /2), pen));
                         break;
                     default:
                         break;
@@ -95,20 +95,16 @@ namespace OOPDrawWindowsForm
             }
             pictureBoxDraw.Refresh();
         }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-         
-        }
-    
-
         private void buttonAdd_Click(object sender, EventArgs e)
         {
            
             if (shapes == null)
                 shapes = new List<Shape>();         
-                Random rnd = new Random();  
-              Pen pen = new Pen(colorDialog1.Color, rnd.Next(0, 5));
+                Random rnd = new Random();
+            int width = int.Parse(textBoxWidth.Text);
+            if (width <= 0)
+                MessageBox.Show("Помилка вводу ширини! Ширина фiгури не може бути 0 або менше!", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            Pen pen = new Pen(colorDialog1.Color, width);
                 switch (comboBox1.SelectedIndex)
                 {
                     case 0:
@@ -116,25 +112,25 @@ namespace OOPDrawWindowsForm
                                                       rnd.Next(0, pictureBoxDraw.Height), pen));
                         break;
                     case 1:
-                        shapes.Add(new Ellipse(rnd.Next(5, pictureBoxDraw.Width),
-                                                rnd.Next(5, pictureBoxDraw.Height),
+                        shapes.Add(new Ellipse(rnd.Next(5, pictureBoxDraw.Width/2),
+                                                rnd.Next(5, pictureBoxDraw.Height/2),
                                                 rnd.Next(5, pictureBoxDraw.Width/10),
                                                 rnd.Next(5, pictureBoxDraw.Height/10), pen));
                         break;
                     case 2:
-                        shapes.Add(new Line(rnd.Next(5, pictureBoxDraw.Width),
-                                             rnd.Next(5, pictureBoxDraw.Height),
-                                             rnd.Next(5, pictureBoxDraw.Width),
-                                             rnd.Next(5, pictureBoxDraw.Height), pen));
+                        shapes.Add(new Line(rnd.Next(5, pictureBoxDraw.Width/2),
+                                             rnd.Next(5, pictureBoxDraw.Height/2),
+                                             rnd.Next(5, pictureBoxDraw.Width/2),
+                                             rnd.Next(5, pictureBoxDraw.Height/2), pen));
                         break;
                     case 3:
-                        shapes.Add(new Circle(rnd.Next(5, pictureBoxDraw.Width),
-                                               rnd.Next(5, pictureBoxDraw.Height),
+                        shapes.Add(new Circle(rnd.Next(5, pictureBoxDraw.Width/2),
+                                               rnd.Next(5, pictureBoxDraw.Height/2),
                                                rnd.Next(5, pictureBoxDraw.Width/10), pen));
                         break;
                     case 4:
-                        shapes.Add(new OOPDraw.Rectangle(rnd.Next(5, pictureBoxDraw.Width),
-                                                          rnd.Next(5, pictureBoxDraw.Height),
+                        shapes.Add(new OOPDraw.Rectangle(rnd.Next(5, pictureBoxDraw.Width/2),
+                                                          rnd.Next(5, pictureBoxDraw.Height/2),
                                                           rnd.Next(5, pictureBoxDraw.Width /5),
                                                           rnd.Next(5, pictureBoxDraw.Height/5), pen));
                         break;
@@ -161,33 +157,11 @@ namespace OOPDrawWindowsForm
             }
             pictureBoxDraw.Refresh();
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void trackBarElNumber_Scroll(object sender, EventArgs e)
-        {
-
-        }
-
-        private void numericUpDownShapes_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void numericUpDownX_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void numericUpDownY_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
         protected int X;
         protected int Y;
+        protected int X2;
+
+        protected int Y2;
         private void pictureBoxDraw_MouseDown(object sender, MouseEventArgs e)
         {
             X = e.X;
@@ -195,30 +169,38 @@ namespace OOPDrawWindowsForm
         }
         private void pictureBoxDraw_MouseUp(object sender, MouseEventArgs e)
         {
-            int X2 = e.X;
-            int Y2 = e.Y;
+             X2 = e.X;
+             Y2 = e.Y;
             if (shapes == null)     
                 shapes = new List<Shape>();
             Random rnd = new Random();
-            Pen pen = new Pen(colorDialog1.Color, rnd.Next(5));
+            int width = int.Parse(textBoxWidth.Text);
+            if (width <= 0)
+                MessageBox.Show("Помилка вводу ширини! Ширина фiгури не може бути 0 або менше!", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            Pen pen = new Pen(colorDialog1.Color, width);
             switch (comboBox1.SelectedIndex)
             {
                 case 0:
                     shapes.Add(new OOPDraw.Point(X2, Y2, pen));
                     break;
                 case 1:
-                    shapes.Add(new Ellipse(X2,  Y2, rnd.Next(5, pictureBoxDraw.Width / 10),
-                                            rnd.Next(5, pictureBoxDraw.Height / 10), pen));
+                    shapes.Add(new Ellipse(X,  Y, X2 - X, Y2 - Y, pen));
                     break;
                 case 2:
-                    shapes.Add(new Line(X, Y, X2, Y2, pen));
+                 shapes.Add(new Line(X, Y, X2, Y2, pen));
                     break;
                 case 3:
-                    shapes.Add(new Circle(X, Y,
-                                           rnd.Next(5, pictureBoxDraw.Width / 10), pen));
+                    shapes.Add(new Circle(X, Y, X2 - X, pen));
                     break;
                 case 4:
-                    shapes.Add(new OOPDraw.Rectangle(X2, Y2, rnd.Next(5, pictureBoxDraw.Width / 2), rnd.Next(5, pictureBoxDraw.Height / 2), pen));
+                    if (e.X <= X && e.Y <= Y)
+                        shapes.Add(new OOPDraw.Rectangle(e.X, e.Y, X - e.X, Y - e.Y, pen));
+                    else if(e.X <= X && e.Y >= Y)
+                        shapes.Add(new OOPDraw.Rectangle(e.X, Y, X - e.X, e.Y - Y, pen));
+                    else if (e.X >= X && e.Y <= Y)
+                        shapes.Add(new OOPDraw.Rectangle(X, e.Y, e.X - X, Y - e.Y, pen));
+                    else
+                        shapes.Add(new OOPDraw.Rectangle(X, Y, X2 - X, Y2 - Y, pen));
                     break;
                 default:
                     break;
@@ -229,16 +211,47 @@ namespace OOPDrawWindowsForm
 
         private void pictureBoxDraw_MouseMove(object sender, MouseEventArgs e)
         {
+            Random rnd = new Random();
+            Graphics graphics = pictureBoxDraw.CreateGraphics();
+            int width = int.Parse(textBoxWidth.Text);
             if (e.Button == MouseButtons.Left)
             {
-                if (comboBox1.SelectedIndex == 2)
+                Pen pen = new Pen(colorDialog1.Color, width);
+                switch (comboBox1.SelectedIndex)
                 {
-                    Random rnd = new Random();
-                    pictureBoxDraw.Refresh();
-                    Graphics graphics = pictureBoxDraw.CreateGraphics();
-                    graphics.DrawLine(new Pen(colorDialog1.Color, 2), X, Y, e.X, e.Y);
+                    case 1:
+                        pictureBoxDraw.Refresh();
+                        graphics.DrawEllipse(pen, X, Y, e.X - X, e.Y-Y);
+                        break;
+                    case 2:
+                        pictureBoxDraw.Refresh(); 
+                       graphics.DrawLine(pen, X, Y, e.X, e.Y);
+                        break;
+                    case 3:
+                        pictureBoxDraw.Refresh();
+                        graphics.DrawEllipse(pen, X, Y, e.X - X, e.X - X);
+                        break;
+                    case 4:
+                        pictureBoxDraw.Refresh();
+                        if (e.X <= X && e.Y <= Y)
+                        graphics.DrawRectangle(pen, e.X, e.Y, X - e.X, Y - e.Y);
+                        else if (e.X <= X && e.Y >= Y)
+                        graphics.DrawRectangle(pen, e.X, Y, X - e.X, e.Y - Y);
+                        else if (e.X >= X && e.Y <= Y)
+                        graphics.DrawRectangle(pen, X, e.Y, e.X - X, Y - e.Y);
+                        else
+                        graphics.DrawRectangle(pen, X, Y, e.X - X, e.Y - Y);
+                        break;
+                    default:
+                        break;
                 }
+                
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -18,7 +18,7 @@ namespace OOPDraw
         public override void Draw(Graphics graphics)
         {
 
-            graphics.DrawEllipse(Pen, CoordX - Radius1/2, CoordY-Radius1/2, Radius1, Radius1);
+            graphics.DrawEllipse(Pen, CoordX, CoordY, Radius1, Radius1);
         }
         public override void Move(int dx, int dy)
         {

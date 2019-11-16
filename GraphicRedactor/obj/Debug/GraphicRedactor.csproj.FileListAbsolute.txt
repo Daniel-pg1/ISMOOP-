@@ -1,0 +1,15 @@
+D:\вижуалка\программі\ISMOOP\GraphicRedactor\bin\Debug\GraphicRedactor.exe.config
+D:\вижуалка\программі\ISMOOP\GraphicRedactor\bin\Debug\GraphicRedactor.exe
+D:\вижуалка\программі\ISMOOP\GraphicRedactor\bin\Debug\GraphicRedactor.pdb
+D:\вижуалка\программі\ISMOOP\GraphicRedactor\obj\Debug\GraphicRedactor.csprojAssemblyReference.cache
+D:\вижуалка\программі\ISMOOP\GraphicRedactor\obj\Debug\GraphicRedactor.Form1.resources
+D:\вижуалка\программі\ISMOOP\GraphicRedactor\obj\Debug\GraphicRedactor.Properties.Resources.resources
+D:\вижуалка\программі\ISMOOP\GraphicRedactor\obj\Debug\GraphicRedactor.csproj.GenerateResource.cache
+D:\вижуалка\программі\ISMOOP\GraphicRedactor\obj\Debug\GraphicRedactor.exe
+D:\вижуалка\программі\ISMOOP\GraphicRedactor\obj\Debug\GraphicRedactor.pdb
+D:\вижуалка\программі\ISMOOP\GraphicRedactor\bin\Debug\OOPDraw.dll
+D:\вижуалка\программі\ISMOOP\GraphicRedactor\bin\Debug\OOPDraw.pdb
+D:\вижуалка\программі\ISMOOP\GraphicRedactor\obj\Debug\GraphicRedactor.csproj.CopyComplete
+D:\вижуалка\программі\ISMOOP\GraphicRedactor\bin\Debug\az-Cyrl\GraphicRedactor.resources.dll
+D:\вижуалка\программі\ISMOOP\GraphicRedactor\obj\Debug\GraphicRedactor.Form1.az-Cyrl.resources
+D:\вижуалка\программі\ISMOOP\GraphicRedactor\obj\Debug\az-Cyrl\GraphicRedactor.resources.dll

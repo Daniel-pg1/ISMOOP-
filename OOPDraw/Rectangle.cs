@@ -16,7 +16,7 @@ namespace OOPDraw
         }
         public override void Draw(Graphics graphics)
         {
-             graphics.DrawRectangle(Pen, CoordX - CoordX2/2, CoordY - CoordY2/2, CoordX2, CoordY2 );
+             graphics.DrawRectangle(Pen, CoordX, CoordY, CoordX2, CoordY2 );
         }
         public override void Move(int dx, int dy)
         {
