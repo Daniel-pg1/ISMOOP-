@@ -103,7 +103,7 @@
             this.buttonCircle.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonCircle.Name = "buttonCircle";
             this.buttonCircle.UseVisualStyleBackColor = false;
-            this.buttonCircle.Click += new System.EventHandler(this.button1_Click);
+            this.buttonCircle.Click += new System.EventHandler(this.buttonCircle_Click);
             // 
             // pictureBoxDraw
             // 

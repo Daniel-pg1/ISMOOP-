@@ -19,6 +19,7 @@ namespace GraphicRedactor
         protected int MouseX2;
         protected int MouseY2;
         protected int Width;
+        protected bool MouseDown;
 
         public void AddShape(Shape shape)
         {
@@ -28,8 +29,8 @@ namespace GraphicRedactor
         }
         public void DeleteShape(int number)
         {
-            Shapes.RemoveAt(listBoxShapes.SelectedIndex);
-            listBoxShapes.Items.RemoveAt(listBoxShapes.SelectedIndex);
+            Shapes.RemoveAt(number);
+            listBoxShapes.Items.RemoveAt(number);
             pictureBoxDraw.Refresh();
         }
         public Form1()
@@ -72,42 +73,41 @@ namespace GraphicRedactor
                 MessageBox.Show("Помилка вводу ширини!", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             for (int i = 0; i < Shapes.Count; i++)
             {
-                Shapes[i].Draw(e.Graphics);
-                
+                Shapes[i].Draw(e.Graphics); 
             }
-            switch (Mode)
-            {
-                case Mode.DrawPoint:
-                    break;
-                case Mode.DrawEllipse:
-                    e.Graphics.DrawEllipse(new Pen(buttonColor.BackColor, Width), MouseX, MouseY, MouseX2 - MouseX, MouseY2 - MouseY);
-                    break;
-                case Mode.DrawLine:
-                    e.Graphics.DrawLine(new Pen(buttonColor.BackColor, Width), MouseX, MouseY, MouseX2, MouseY2);
-                    break;
-                case Mode.DrawCircle:
-                    if (MouseX2 <= MouseX && MouseY2 <= MouseY)
-                        e.Graphics.DrawEllipse(new Pen(buttonColor.BackColor, Width), MouseX2, MouseY2, (int)Math.Sqrt(Math.Pow((MouseX2 - MouseX), 2) + Math.Pow((MouseY2 - MouseY), 2)), (int)Math.Sqrt(Math.Pow((MouseX2 - MouseX), 2) + Math.Pow((MouseY2 - MouseY), 2)));
-                    else if (MouseX2 <= MouseX && MouseY2 >= MouseY)
-                        e.Graphics.DrawEllipse(new Pen(buttonColor.BackColor, Width), MouseX2, MouseY, (int)Math.Sqrt(Math.Pow((MouseX2 - MouseX), 2) + Math.Pow((MouseY2 - MouseY), 2)), (int)Math.Sqrt(Math.Pow((MouseX2 - MouseX), 2) + Math.Pow((MouseY2 - MouseY), 2)));
-                    else if (MouseX2 >= MouseX && MouseY2 <= MouseY)
-                        e.Graphics.DrawEllipse(new Pen(buttonColor.BackColor, Width), MouseX, MouseY2, (int)Math.Sqrt(Math.Pow((MouseX2 - MouseX), 2) + Math.Pow((MouseY2 - MouseY), 2)), (int)Math.Sqrt(Math.Pow((MouseX2 - MouseX), 2) + Math.Pow((MouseY2 - MouseY), 2)));
-                 else
-                    e.Graphics.DrawEllipse(new Pen(buttonColor.BackColor, Width), MouseX, MouseY, (int)Math.Sqrt(Math.Pow((MouseX2 - MouseX), 2) + Math.Pow((MouseY2 - MouseY), 2)), (int)Math.Sqrt(Math.Pow((MouseX2 - MouseX), 2) + Math.Pow((MouseY2 - MouseY), 2)));
-                    break;
-                case Mode.DrawRectangle:
-                    if (MouseX2 <= MouseX && MouseY2 <= MouseY)
-                        e.Graphics.DrawRectangle(new Pen(buttonColor.BackColor, Width), MouseX2, MouseY2, MouseX - MouseX2, MouseY - MouseY2);
-                    else if (MouseX2 <= MouseX && MouseY2 >= MouseY)
-                        e.Graphics.DrawRectangle(new Pen(buttonColor.BackColor, Width), MouseX2, MouseY, MouseX - MouseX2, MouseY2 - MouseY);
-                    else if (MouseX2 >= MouseX && MouseY2 <= MouseY)
-                        e.Graphics.DrawRectangle(new Pen(buttonColor.BackColor, Width), MouseX, MouseY2, MouseX2 - MouseX, MouseY - MouseY2);
-                    else
-                        e.Graphics.DrawRectangle(new Pen(buttonColor.BackColor, Width), MouseX, MouseY, MouseX2 - MouseX, MouseY2 - MouseY);
-                    break;
-                default:
-                    break;
-            }
+            if (MouseDown)
+                switch (Mode)
+                {
+                    case Mode.DrawEllipse:
+                        e.Graphics.DrawEllipse(new Pen(buttonColor.BackColor, Width), MouseX, MouseY, MouseX2 - MouseX, MouseY2 - MouseY);
+                        break;
+                    case Mode.DrawLine:
+                        e.Graphics.DrawLine(new Pen(buttonColor.BackColor, Width), MouseX, MouseY, MouseX2, MouseY2);
+                        break;
+                    case Mode.DrawCircle:
+                        if (MouseX2 <= MouseX && MouseY2 <= MouseY)
+                            e.Graphics.DrawEllipse(new Pen(buttonColor.BackColor, Width), MouseX2, MouseY2, (int)Math.Sqrt(Math.Pow((MouseX2 - MouseX), 2) + Math.Pow((MouseY2 - MouseY), 2)), (int)Math.Sqrt(Math.Pow((MouseX2 - MouseX), 2) + Math.Pow((MouseY2 - MouseY), 2)));
+                        else if (MouseX2 <= MouseX && MouseY2 >= MouseY)
+                            e.Graphics.DrawEllipse(new Pen(buttonColor.BackColor, Width), MouseX2, MouseY, (int)Math.Sqrt(Math.Pow((MouseX2 - MouseX), 2) + Math.Pow((MouseY2 - MouseY), 2)), (int)Math.Sqrt(Math.Pow((MouseX2 - MouseX), 2) + Math.Pow((MouseY2 - MouseY), 2)));
+                        else if (MouseX2 >= MouseX && MouseY2 <= MouseY)
+                            e.Graphics.DrawEllipse(new Pen(buttonColor.BackColor, Width), MouseX, MouseY2, (int)Math.Sqrt(Math.Pow((MouseX2 - MouseX), 2) + Math.Pow((MouseY2 - MouseY), 2)), (int)Math.Sqrt(Math.Pow((MouseX2 - MouseX), 2) + Math.Pow((MouseY2 - MouseY), 2)));
+                        else
+                            e.Graphics.DrawEllipse(new Pen(buttonColor.BackColor, Width), MouseX, MouseY, (int)Math.Sqrt(Math.Pow((MouseX2 - MouseX), 2) + Math.Pow((MouseY2 - MouseY), 2)), (int)Math.Sqrt(Math.Pow((MouseX2 - MouseX), 2) + Math.Pow((MouseY2 - MouseY), 2)));
+                        break;
+                    case Mode.DrawRectangle:
+                        if (MouseX2 <= MouseX && MouseY2 <= MouseY)
+                            e.Graphics.DrawRectangle(new Pen(buttonColor.BackColor, Width), MouseX2, MouseY2, MouseX - MouseX2, MouseY - MouseY2);
+                        else if (MouseX2 <= MouseX && MouseY2 >= MouseY)
+                            e.Graphics.DrawRectangle(new Pen(buttonColor.BackColor, Width), MouseX2, MouseY, MouseX - MouseX2, MouseY2 - MouseY);
+                        else if (MouseX2 >= MouseX && MouseY2 <= MouseY)
+                            e.Graphics.DrawRectangle(new Pen(buttonColor.BackColor, Width), MouseX, MouseY2, MouseX2 - MouseX, MouseY - MouseY2);
+                        else
+                            e.Graphics.DrawRectangle(new Pen(buttonColor.BackColor, Width), MouseX, MouseY, MouseX2 - MouseX, MouseY2 - MouseY);
+                        break;
+                    default:
+                        break;
+                }
+            
             
         }
 
@@ -128,6 +128,7 @@ namespace GraphicRedactor
 
         private void pictureBoxDraw_MouseDown(object sender, MouseEventArgs e)
         {
+            MouseDown = true;
             switch (Mode)
             {
                 case Mode.DrawPoint:
@@ -216,13 +217,14 @@ namespace GraphicRedactor
                 default:
                     break;
             }
-            pictureBoxDraw.Refresh();
+            MouseDown = false;
         }
 
         private void pictureBoxDraw_MouseMove(object sender, MouseEventArgs e)
         {  
                 switch (Mode)
                 {
+                    
                     case Mode.DrawLine:
                     if (e.Button == MouseButtons.Left)
                     {
@@ -261,15 +263,14 @@ namespace GraphicRedactor
           
 
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Mode = Mode.DrawCircle;
-        }
-
         private void buttonRectangle_Click(object sender, EventArgs e)
         {
             Mode = Mode.DrawRectangle;
+        }
+
+        private void buttonCircle_Click(object sender, EventArgs e)
+        {
+            Mode = Mode.DrawCircle;
         }
     }
 }

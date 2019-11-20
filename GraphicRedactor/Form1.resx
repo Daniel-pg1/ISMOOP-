@@ -240,6 +240,9 @@
   <data name="&gt;&gt;listBoxShapes.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
+  <data name="&gt;&gt;buttonColor.Name" xml:space="preserve">
+    <value>buttonColor</value>
+  </data>
   <data name="&gt;&gt;buttonLine.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -333,14 +336,11 @@
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="buttonCircle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>107, 43</value>
-  </data>
   <data name="textBoxWidth.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
-  <data name="&gt;&gt;buttonColor.Name" xml:space="preserve">
-    <value>buttonColor</value>
+  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -396,8 +396,8 @@
   <data name="&gt;&gt;buttonDelete.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt</value>
+  <data name="buttonCircle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 43</value>
   </data>
   <data name="ButtonPoint.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Zoom</value>
